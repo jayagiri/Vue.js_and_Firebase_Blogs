@@ -1,9 +1,9 @@
 <template>
   <div class="app-wrapper">
     <div class="app">
-      <Navigation />
+      <Navigation v-if="!nagivation" />
       <router-view />
-      <Footer />
+      <Footer v-if="!nagivation" />
     </div>
   </div>
 </template>
@@ -18,12 +18,33 @@ export default {
     Footer,
   },
   data() {
-    return {};
+    return {
+      nagivation: null,
+    };
   },
-  created() {},
+  created() {
+    this.checkRoute();
+  },
   mounted() {},
-  methods: {},
-  watch: {},
+  methods: {
+    checkRoute() {
+      if (
+        this.$route.name === "Login" ||
+          this.$route.name === "Register" ||
+          this.$route.name === "ForgotPassword"
+      )
+      {
+        this.nagivation = true;
+        return;
+      }
+      this.nagivation = false;
+    },
+  },
+  watch: {
+    $$route(){
+      this.checkRoute();
+    }
+  }, 
 };
 </script>
 
@@ -84,11 +105,11 @@ button,
   border: none;
   text-transform: uppercase;
 
-  &:focus{
+  &:focus {
     outline: none;
   }
   &:hover {
-    background-color: rgba (48,48,48,0.7);
+    background-color: rgba (48, 48, 48, 0.7);
   }
 }
 .button-ghost {
@@ -99,7 +120,7 @@ button,
   font-size: 15px;
   font-weight: 500;
   background-color: transparent;
-  @media (min-width:700px ){
+  @media (min-width: 700px) {
     margin-top: 0;
     margin-left: auto;
   }
@@ -108,16 +129,16 @@ button,
   }
 }
 
-  .button-light {
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-  }
-  .button-inactive {
-    pointer-events: none !important;
-    cursor:none !important;
-    background-color: rgba (128,128,128,0,5);
-  }
+.button-light {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.button-inactive {
+  pointer-events: none !important;
+  cursor: none !important;
+  background-color: rgba (128, 128, 128, 0, 5) !important;
+}
 
 .blog-card-wrap {
   position: relative;

@@ -1,6 +1,7 @@
 <template>
   <div class="blog-card">
-    <div class="icons">
+    
+    <div v-show="editPost" class="icons">
       <div class="icon">
         <Edit class="edit" />
       </div>
@@ -27,20 +28,25 @@ import Arrow from "../assets/Icons/arrow-right-light.svg";
 import Edit from "../assets/Icons/edit-regular.svg";
 import Delete from "../assets/Icons/trash-regular.svg";
 export default {
-  name: "BlogCard",
+  name: "blogCard",
   props: ["post"],
   components: {
     Arrow,
     Edit,
     Delete,
   },
+  computed:{
+    editPost(){
+      return this.$store.state.editPost;
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .blog-card {
-  position: relative;
-  cursor: pointer;
+  position: relative;  
+
   display: flex;
   flex-direction: column;
   border-radius: 8px;
