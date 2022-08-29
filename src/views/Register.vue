@@ -1,7 +1,6 @@
 <template>
   <div class="form-wrap">
     <form class="register">
-
       <p class="login-register">
         Already have an account?
         <router-link class="router-link" :to="{ name: 'Login' }"
@@ -47,7 +46,6 @@ import user from "../assets/Icons/user-alt-light.svg";
 import firebase from "firebase/app";
 import "firebase/auth";
 import db from "../firebase/firebaseInit";
-
 
 export default {
   name: "Register",
@@ -100,7 +98,6 @@ export default {
       return;
     },
   },
-
 };
 </script>
 
@@ -108,7 +105,6 @@ export default {
 .register {
   h2 {
     max-width: 600px;
-
   }
 }
 </style>
