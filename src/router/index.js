@@ -6,6 +6,7 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import ForgotPassword from "../views/ForgotPassword.vue";
 
+
 Vue.use(VueRouter);
 
 const routes = [ 
@@ -49,7 +50,6 @@ const routes = [
       title:"Forgot Password",
    },
   },
-
 ];
 
 const router = new VueRouter({
