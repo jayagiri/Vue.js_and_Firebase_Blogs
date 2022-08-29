@@ -79,13 +79,14 @@ export default {
     }
     h2 {
       text-align: center;
-      font-size: 1px;
+      font-size: 32px;
       color: #303030;
       margin-bottom: 40px;
       @media (min-width: 900px) {
         font-size: 40px;
       }
     }
+    
     .inputs {
       width: 100%;
       max-width: 350px;
@@ -112,7 +113,7 @@ export default {
           left: 6px;
         }
       }
-    }
+    }  
 
     .forgot-password {
       text-decoration: none;
