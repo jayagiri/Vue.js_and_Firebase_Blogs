@@ -23,6 +23,7 @@
         <h2>Never miss a update. Register for your free account today !</h2>
         <router-link class="router-button" to="#">
           Register for fireBlog <Arrow class="arrow arr ow-light"/>
+
         </router-link>
       </div>
     </div>

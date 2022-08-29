@@ -1,6 +1,7 @@
 <template>
   <div class="form-wrap">
     <form class="register">
+
       <p class="login-register">
         Already have an account?
         <router-link class="router-link" :to="{ name: 'Login' }"
@@ -25,6 +26,7 @@
           <input type="text" placeholder="Email" v-model="email" />
           <email class="icon" />
         </div>
+
         <div class="input">
           <input type="password" placeholder="Password" v-model="password" />
           <password class="icon" />
@@ -37,7 +39,7 @@
     <div class="background"></div>
   </div>
 </template>
- 
+
 <script>
 import email from "../assets/Icons/envelope-regular.svg";
 import password from "../assets/Icons/lock-alt-solid.svg";
@@ -45,6 +47,7 @@ import user from "../assets/Icons/user-alt-light.svg";
 import firebase from "firebase/app";
 import "firebase/auth";
 import db from "../firebase/firebaseInit";
+
 
 export default {
   name: "Register",
@@ -97,6 +100,7 @@ export default {
       return;
     },
   },
+
 };
 </script>
 
@@ -104,6 +108,7 @@ export default {
 .register {
   h2 {
     max-width: 600px;
+
   }
 }
 </style>

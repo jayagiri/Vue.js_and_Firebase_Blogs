@@ -13,6 +13,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import BlogCard from "../components/BlogCard";
 export default {
@@ -33,6 +34,7 @@ export default {
   },
   beforeDestroy() {
     this.$store.commit("toggleEditPost", false);
+
   },
 };
 </script>

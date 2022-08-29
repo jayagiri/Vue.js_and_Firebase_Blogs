@@ -4,6 +4,7 @@
       <div class="left">
         <div class="col-1">
           <router-link class="header" :to="{ name: 'Home' }"
+
             >Giri Blogs (Admin) </router-link>
           <ul>
             <li>
