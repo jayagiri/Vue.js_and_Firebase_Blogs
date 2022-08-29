@@ -17,6 +17,7 @@ const routes = [
     meta:{
        title:"Home",
     },
+
   },
   {
     path: "/blogs",
@@ -50,6 +51,7 @@ const routes = [
       title:"Forgot Password",
    },
   },
+
 ];
 
 const router = new VueRouter({
