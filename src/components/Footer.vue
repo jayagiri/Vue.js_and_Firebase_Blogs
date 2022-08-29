@@ -4,19 +4,19 @@
       <div class="left">
         <div class="col-1">
           <router-link class="header" :to="{ name: 'home' }"
-            >FireBlogs</router-link>
+            >Giri Blogs (Admin) </router-link>
           <ul>
             <li>
-              <a href="#"><youTube class="svg-icon" /></a>
+              <a href="https://www.youtube.com/channel/UCHzuKaxOud2xlN1tpJWnxDQ"><youTube class="svg-icon" /></a>
             </li>
             <li>
-              <a href="#"><twitter class="svg-icon" /></a>
+              <a href="https://twitter.com/bijayadip_giri"><twitter class="svg-icon" /></a>
             </li>
             <li>
               <a href="#"><instagram class="svg-icon" /></a>
             </li>
             <li>
-              <a href="#"><linkedin class="svg-icon" /></a>
+              <a href="https://www.linkedin.com/in/bijaya-giri-2bbb4a115/"><linkedin class="svg-icon" /></a>
             </li>
           </ul>
         </div>

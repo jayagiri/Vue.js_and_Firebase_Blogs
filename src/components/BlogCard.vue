@@ -1,6 +1,7 @@
 <template>
   <div class="blog-card">
-    <div class="icons">
+    
+    <div v-show="editPost" class="icons">
       <div class="icon">
         <Edit class="edit" />
       </div>
@@ -34,13 +35,18 @@ export default {
     Edit,
     Delete,
   },
+  computed:{
+    editPost(){
+      return this.$store.state.editPost;
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .blog-card {
-  position: relative;
-  cursor: pointer;
+  position: relative;  
+
   display: flex;
   flex-direction: column;
   border-radius: 8px;
